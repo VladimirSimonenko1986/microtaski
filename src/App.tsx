@@ -5,31 +5,14 @@ import {NewComponent} from "./NewComponent";
 
 
 function App() {
-
-    let [students, setStudents]=useState([
-        {id: 1, name: 'James', age:  51},
-        {id: 2, name: 'Bob', age:  76},
-        {id: 3, name: 'Robert', age:  12},
-        {id: 4, name: 'David', age:  24},
-        {id: 5, name: 'Mike', age:  43},
-        {id: 6, name: 'Eva', age:  24},
-        {id: 7, name: 'Billy', age:  56},
-        {id: 8, name: 'Kris', age:  34},
-        {id: 1, name: 'James', age:  51},
-        {id: 2, name: 'Bob', age:  76},
-        {id: 3, name: 'Robert', age:  12},
-        {id: 4, name: 'David', age:  24},
-        {id: 5, name: 'Mike', age:  43},
-        {id: 6, name: 'Eva', age:  24},
-        {id: 7, name: 'Billy', age:  56},
-        {id: 8, name: 'Kris', age:  34},
-
-               ]);
-
-
+    const topCars = [
+        {manufacturer:'BMW', model:'m5cs'},
+        {manufacturer:'Mercedes', model:'e63s'},
+        {manufacturer:'Audi', model:'rs6'}
+    ]
     return (
         <>
-           <NewComponent students={students}/>
+           <NewComponent topCars={topCars}/>
         </>
     );
 }
