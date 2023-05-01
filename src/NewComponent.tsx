@@ -9,18 +9,26 @@ type CarsType = {
     model: string
 }
 
+export const topCars = [
+    {manufacturer: 'BMW', model: 'm5cs'},
+    {manufacturer: 'Mercedes', model: 'e63s'},
+    {manufacturer: 'Audi', model: 'rs6'}
+]
+
+
 export const NewComponent = (props: TopCarsType) => {
+
     return (
         <table>
-<thead>
+            <thead>
             <tr>
                 <th>№</th>
                 <th>Car</th>
                 <th>Model</th>
             </tr>
-</thead>
+            </thead>
             <tbody>
-            {props.topCars.map((car, index )=> {
+            {props.topCars.map((car, index) => {
                 return (
                     <tr>
                         <td>{index + 1}</td>
@@ -29,12 +37,7 @@ export const NewComponent = (props: TopCarsType) => {
                     </tr>
                 )
             })}
-
-
-        </tbody>
+            </tbody>
         </table>
-
-
-
-            )
-            }
+    )
+}
