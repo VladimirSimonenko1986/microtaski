@@ -5,7 +5,7 @@ import {Button} from "./components/button";
 import {MouseEvent} from "react";
 import {NewCompon} from "./NewCompon";
 
-type FilterType = 'all' | 'dollar' | 'ruble'
+export type FilterType = 'all' | 'dollar' | 'ruble'
 
 function App() {
 
@@ -29,13 +29,13 @@ function App() {
     if (filter === 'ruble') {
         currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === 'RUBLS')
     }
-    const onClickFilterHundler = (nameButton: FilterType) => {
+    const onClickFilterHundlerMain = (nameButton: FilterType) => {
         setFilter(nameButton)
     }
 
 
     return (
-<> <NewCompon/>
+<> <NewCompon onClickFilterHundler={onClickFilterHundlerMain} currentMoney={currentMoney}/>
 </>
 
 

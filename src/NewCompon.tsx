@@ -1,15 +1,27 @@
 
 import React from "react";
+import {FilterType} from "./App";
 
 
-type CurrentMoneyType = Array[]
+type NewComponentProps = {
+    currentMoney : Array<Currency>,
+    onClickFilterHundler: (filter: FilterType) => void
+}
 
-export const NewCompon = () => {
-    let currentMoney;
+type Currency = {
+    banknots: string,
+    value: number,
+    number: string
+}
+
+export const NewCompon : React.FC<NewComponentProps> = ({
+            currentMoney,
+            onClickFilterHundler
+                          }) => {
     return (
         <>
             <ul>
-                {currentMoney<CurrentMoneyType>.map((objFromMoneyArr, index) => {
+                {currentMoney.map((objFromMoneyArr, index) => {
                     return (
                         <li key={index}>
                             <span> {objFromMoneyArr.banknots}</span>
